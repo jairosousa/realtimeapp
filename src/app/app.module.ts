@@ -7,10 +7,12 @@ import { AngularFireModule } from 'angularfire2/index';
 
 import { AppComponent } from './app.component';
 import { CadastroPessoaModule } from './cadastro-pessoa/cadastro-pessoa.module';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
