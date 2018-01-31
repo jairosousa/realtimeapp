@@ -1,9 +1,15 @@
 <h1>Cadastro de Pessoas</h1>
+<fieldset>
+  <form #f="ngForm" (submit)="form_submit(f)" novalidate>
 
-<form #f="ngForm" (submit)="form_submit(f)" novalidate>
-  <input type="text" ngModel name="nome" placeholder="Nome">
-  <br />
-  <input type="text" ngModel name="sobrenome" placeholder="Sobrenome">
-  <br />
-  <button type="submit">Cadastar</button>
-</form>
+    <div class="form-group">
+      <label>Nome</label>
+      <input type="text" ngModel name="nome" placeholder="Nome">
+    </div>
+    <div class="form-group">
+      <label>Sobrenome</label>
+      <input type="text" ngModel name="sobrenome" placeholder="Sobrenome">
+    </div>
+    <button class="btn btn-primary" type="submit">Cadastar</button>
+  </form>
+</fieldset>
