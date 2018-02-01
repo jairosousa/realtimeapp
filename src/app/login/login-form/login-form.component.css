@@ -1,0 +1,16 @@
+.logo-login {
+    margin-left: 0 !important;
+}
+.logo-login img {
+    width: 70px;
+    height: 70px;
+    margin-right: 5px;
+    display: inline;
+}
+.logo-login .texto {
+    color: #01748A;
+    font-size: 25px;
+    font-weight: bold;
+    display: inline;
+    margin-top: 5px;
+}
