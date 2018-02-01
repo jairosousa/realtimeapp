@@ -8,6 +8,8 @@ import { AngularFireModule } from 'angularfire2/index';
 import { AppComponent } from './app.component';
 import { CadastroPessoaModule } from './cadastro-pessoa/cadastro-pessoa.module';
 import { NavbarComponent } from './navbar/navbar.component';
+import { AppRoutingModule } from './app.routing.module';
+import { LoginModule } from './login/login.module';
 
 @NgModule({
   declarations: [
@@ -19,8 +21,9 @@ import { NavbarComponent } from './navbar/navbar.component';
     FormsModule,
     HttpModule,
     CadastroPessoaModule, 
-    AngularFireModule.initializeApp(FirebaseConfig)
-  
+    AngularFireModule.initializeApp(FirebaseConfig),
+    AppRoutingModule,
+    LoginModule
   ],
   providers: [],
   bootstrap: [AppComponent]

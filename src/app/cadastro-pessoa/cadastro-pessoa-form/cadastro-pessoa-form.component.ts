@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { AngularFireDatabase } from 'angularfire2/database';
+import { AngularFireAuth } from 'angularfire2/auth';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cadastro-pessoa-form',
@@ -12,7 +14,9 @@ export class CadastroPessoaFormComponent implements OnInit {
   pessoas: Array<any>;
 
   constructor(
-    private angularFire: AngularFireDatabase
+    private angularFire: AngularFireDatabase,
+    private afAuth: AngularFireAuth,
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -29,5 +33,10 @@ export class CadastroPessoaFormComponent implements OnInit {
       (e: any) => console.log(e.message);
     f.controls.nome.setValue('');
     f.controls.sobrenome.setValue('');
+  }
+
+  form_logout() {
+    this.afAuth.auth.signOut();
+    this.router.navigate([""]);
   }
 }
